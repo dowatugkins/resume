@@ -1,0 +1,82 @@
+.App {
+  flex: 1;
+  flex-direction: column;
+  text-align: center;
+  background-color: #282c34;
+}
+
+html body {
+  display: block;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+div {
+  flex: 1;
+}
+
+#root {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  background-color: blue;
+}
+
+/* All Animations are done at a global level */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 5s linear;
+  }
+
+  .header-card-1 { /* focused */
+
+  }
+
+  .header-card-2 { /* 1 level back */
+
+  }
+
+  .header-card-3 { /* 2 levels back */
+
+  }
+
+  .header-card-4 { /* just left screen */
+
+  }
+
+  .header-card-offscreen { /* off screen */
+
+  }
+
+  .display-side-left {
+
+  }
+
+  .display-side-right {
+
+  }
+
+  .display-side-center { /* offscreen or focused */
+
+  }
+}
+
+p {
+  color: 'white';
+}
+
+.display {
+  flex: 1;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

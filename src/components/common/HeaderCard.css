@@ -1,0 +1,62 @@
+.header-card-1 { /* focused */
+
+  flex: 3;
+  justify-content: center;
+  padding-top: 4em;
+}
+
+.header-card-2 { /* 1 level back */
+
+  flex: 1;
+  justify-content: center;
+  padding-top: 4em;
+}
+
+.header-card-3 { /* 2 levels back */
+
+  flex: 1;
+  justify-content: center;
+  padding-top: 4em;
+}
+
+.header-card-4 { /* 3 levels back, possibly off screen */
+
+  flex: 1;
+  justify-content: center;
+  padding-top: 4em;
+}
+
+.header-card-offscreen { /* off screen */
+}
+
+.display-side-left {
+  align-self: flex-start;
+}
+
+.display-side-right {
+  align-self: flex-end;
+}
+
+.display-side-center { /* offscreen or focused */
+  align-self: center;
+}
+
+.tagline {
+  color: white;
+}
+
+.byline {
+  color: white;
+}
+
+.bylineRow {
+
+  flex-direction: row;
+}
+
+.header-card {
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
