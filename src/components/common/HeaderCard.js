@@ -13,7 +13,9 @@ function HeaderCard(props) {
   const {
     focusLevel = 'offscreen',
     displaySide = 'center',
+    moveDirection,
     item,
+    onClick,
   } = props;
 
   useEffect(() => {
@@ -21,7 +23,7 @@ function HeaderCard(props) {
   }, []);
 
   return (
-    <div className={`header-card-${focusLevel} display-side-${displaySide} header-card`}>
+    <div className={`header-card-${focusLevel} display-side-${displaySide + ((moveDirection && displaySide === 'offscreen') ? '-' + moveDirection : '')} header-card`} onClick={onClick}>
       <p className="tagline">{get(item, 'tagline', '')}</p>
       <div className="bylineRow">
         {/* item.image */}

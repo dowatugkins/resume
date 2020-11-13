@@ -15,14 +15,13 @@ html body {
 }
 
 div {
-  flex: 1;
+  display: flex;
 }
 
 #root {
   display: flex;
   flex: 1;
   height: 100%;
-  background-color: blue;
 }
 
 /* All Animations are done at a global level */
@@ -32,35 +31,22 @@ div {
   }
 
   .header-card-1 { /* focused */
-
   }
 
   .header-card-2 { /* 1 level back */
-
   }
 
   .header-card-3 { /* 2 levels back */
-
   }
 
   .header-card-4 { /* just left screen */
-
   }
 
   .header-card-offscreen { /* off screen */
-
   }
 
-  .display-side-left {
-
-  }
-
-  .display-side-right {
-
-  }
-
-  .display-side-center { /* offscreen or focused */
-
+  .header-card {
+    transition: filter 0.7s, font-size 0.7s, top 0.7s, left 0.7s, right 0.7s, height 0.7s, max-width 0.7s;
   }
 }
 
@@ -78,5 +64,43 @@ p {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes center {
+  100% {
+    padding-top: 4em;
+    font-size: 2em;
+    max-width: 80%;
+  }
+}
+
+@keyframes card-2 {
+  100% {
+    padding-top: 3em;
+    font-size: 1em;
+    max-width: 400px;
+  }
+}
+
+@keyframes card-3 {
+  100% {
+    padding-top: 2em;
+    font-size: 0.7em;
+    max-width: 300px;
+  }
+}
+
+@keyframes card-4 {
+  100% {
+    font-size: 0.6em;
+    max-width: 200px;
+  }
+}
+
+@keyframes offscreen {
+  100% {
+    max-width: 0px;
+    font-size: 0em;
   }
 }

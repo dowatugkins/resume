@@ -1,48 +1,86 @@
 .header-card-1 { /* focused */
-
-  flex: 3;
   justify-content: center;
-  padding-top: 4em;
+  top: 300px;
+  margin: auto;
+  font-size: 2em;
+  max-width: 80%;
+  left: 0 !important;
+  right: 0 !important;
 }
 
 .header-card-2 { /* 1 level back */
-
-  flex: 1;
   justify-content: center;
-  padding-top: 4em;
+  top: 170px;
+  font-size: 1em;
+  max-width: 400px;
+  filter: blur(1.5px);
 }
 
 .header-card-3 { /* 2 levels back */
-
-  flex: 1;
   justify-content: center;
-  padding-top: 4em;
+  top: 80px;
+  font-size: 0.7em;
+  max-width: 300px;
+  filter: blur(5px);
 }
 
 .header-card-4 { /* 3 levels back, possibly off screen */
-
-  flex: 1;
-  justify-content: center;
-  padding-top: 4em;
+  align-self: center;
+  top: 2px;
+  font-size: 0.6em;
+  max-width: 250px;
+  filter: blur(10px);
 }
 
 .header-card-offscreen { /* off screen */
+  font-size: 0em;
+  top: -100px;
+  max-width: 250px;
+}
+
+.header-card-row { /* individual card row */
+  flex: 1;
 }
 
 .display-side-left {
-  align-self: flex-start;
+  right: 50%;
 }
 
 .display-side-right {
-  align-self: flex-end;
+  left: 50%;
 }
 
-.display-side-center { /* offscreen or focused */
-  align-self: center;
+.display-side-offscreen {
+  align-items: center;
+  justify-content: center;
+  filter: blur(10px);
+}
+
+.display-side-offscreen-left {
+  align-items: center;
+  justify-content: center;
+  right: 50%;
+  filter: blur(10px);
+}
+
+.display-side-offscreen-right {
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  filter: blur(10px);
+}
+
+.display-side-center { /*focused */
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  width: 100%;
 }
 
 .tagline {
   color: white;
+  align-self: center;
 }
 
 .byline {
@@ -50,13 +88,59 @@
 }
 
 .bylineRow {
-
   flex-direction: row;
 }
 
 .header-card {
-
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  position: fixed;
+}
+
+.header-card-list {
+  flex-direction: column;
+  min-width: 320px;
+}
+
+@media screen and (max-width: 480px) {
+  .header-card-1 {
+    top: 220px;
+  }
+
+  .header-card-2 {
+    top: 80px;
+  }
+
+  .header-card-3 {
+    top: 2px;
+  }
+
+  .header-card-4 {
+    top: -100px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .header-card-1 {
+    top: 230px;
+  }
+
+  .header-card-2 {
+    top: 60px;
+  }
+
+  .header-card-3 {
+    top: -40px;
+  }
+
+  .header-card-4 {
+    top: -100px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .header-card-1 {
+    top: 250px;
+  }
 }
