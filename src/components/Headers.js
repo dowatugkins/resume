@@ -8,84 +8,35 @@
 import React, { useState, useEffect } from 'react';
 
 import HeaderCard from './common/HeaderCard';
-import { get } from '../config/utilities';
 
 function Headers(props) {
+  const { list, onIndexChange, onOpenInfoBox, isOpen } = props;
+
   const [currentIndex, setCurrentIndex] = useState(props.initialIndex);
-  const [leftIndicies, setLeftIndicies] = useState([]);
-  const [rightIndicies, setRightIndicies] = useState([]);
+  const [rightIndicies, setRightIndicies] = useState([0, 1, 2, 3]);
+  const [leftIndicies, setLeftIndicies] = useState([0, list.length - 1, list.length - 2, list.length - 3]);
   const [moveDirection, setMoveDirection] = useState('none');
 
-  const displayList = [4, 3, 2, 1];
-
-  const { list } = props;
-
   useEffect(() => {
-    const left = [];
-    const right = [];
-    if (currentIndex === 0) {
-      right.push(0);
-      right.push(list.length - 1);
-      right.push(list.length - 2);
-      right.push(list.length - 3);
-    } else if (currentIndex === 1) {
-      right.push(1);
-      right.push(0);
-      right.push(list.length - 1);
-      right.push(list.length - 2);
-    } else if (currentIndex === 2) {
-      right.push(2);
-      right.push(1);
-      right.push(0);
-      right.push(list.length - 1);
-    } else {
-      right.push(currentIndex);
-      right.push(currentIndex - 1);
-      right.push(currentIndex - 2);
-      right.push(currentIndex - 3);
-    }
-    console.log(right);
-    if (currentIndex === list.length) {
-      left.push(0);
-      left.push(1);
-      left.push(2);
-      left.push(3);
-    } else if (currentIndex === list.length - 1) {
-      right.push(list.length);
-      left.push(0);
-      left.push(1);
-      left.push(2);
-    } else if (currentIndex === list.length - 2) {
-      left.push(list.length - 1);
-      right.push(list.length);
-      left.push(0);
-      left.push(1);
-    } else {
-      left.push(currentIndex);
-      left.push(currentIndex + 1);
-      left.push(currentIndex + 2);
-      left.push(currentIndex + 3);
-    }
-
-    setLeftIndicies(left);
-    setRightIndicies(right);
-
     return () => {};
   }, []);
 
   const moveLeft = () => {
     let left = [...leftIndicies];
     let right = [...rightIndicies];
-    left.unshift(currentIndex === 0 ? list.length - 1 : currentIndex - 1);
-    left.pop();
+    right.unshift(currentIndex === 0 ? list.length - 1 : currentIndex - 1);
+    right.pop();
 
-    const lastRight = right[right.length - 1];
-    right.shift();
-    right.push(lastRight === 0 ? list.length - 1 : lastRight - 1);
+    const lastLeft = left[left.length - 1];
+    left.shift();
+    left.push(lastLeft === 0 ? list.length - 1 : lastLeft - 1);
 
     setRightIndicies(right);
     setLeftIndicies(left);
-    setCurrentIndex(currentIndex === 0 ? list.length - 1 : currentIndex - 1);
+
+    const newIndex = currentIndex === 0 ? list.length - 1 : currentIndex - 1;
+    onIndexChange(newIndex);
+    setCurrentIndex(newIndex);
     setMoveDirection('left');
   }
 
@@ -93,23 +44,26 @@ function Headers(props) {
     let left = [...leftIndicies];
     let right = [...rightIndicies];
     console.log(right);
-    right.unshift(currentIndex === list.length - 1 ? 0 : currentIndex + 1);
-    right.pop();
+    left.unshift(currentIndex === list.length - 1 ? 0 : currentIndex + 1);
+    left.pop();
     console.log(right);
     console.log(currentIndex);
 
-    const lastLeft = left[left.length - 1];
-    left.shift();
-    left.push(lastLeft === list.length - 1 ? 0 : lastLeft + 1);
+    const lastRight = right[right.length - 1];
+    right.shift();
+    right.push(lastRight === list.length - 1 ? 0 : lastRight + 1);
 
     setRightIndicies(right);
     setLeftIndicies(left);
-    setCurrentIndex(currentIndex === list.length - 1 ? 0 : currentIndex + 1);
+
+    const newIndex = currentIndex === list.length - 1 ? 0 : currentIndex + 1;
+    onIndexChange(newIndex);
+    setCurrentIndex(newIndex);
     setMoveDirection('right');
   }
 
   return (
-    <div className={'header-card-list'}>
+    <div className={`header-card-list ${isOpen}`}>
       {
       list.map((item, index) => {
         const focusLevel = index === currentIndex ? '1' :
@@ -122,10 +76,10 @@ function Headers(props) {
               'offscreen';
         const direction = displaySide === 'left' ? () => moveLeft() :
           displaySide === 'right' ? () => moveRight() :
-            displaySide === 'center' ? index === currentIndex ? () => moveLeft() : moveDirection === 'right' ? () => moveRight() : () => moveLeft() :
+            displaySide === 'center' ? index === currentIndex ? () => moveRight() : moveDirection === 'right' ? () => moveRight() : () => moveLeft() :
               () => moveLeft();
         return (
-          <HeaderCard onClick={direction} moveDirection={moveDirection} focusLevel={focusLevel} displaySide={displaySide} key={index} item={item} />
+          <HeaderCard isOpen={isOpen} onOpenInfoBox={onOpenInfoBox} onClick={direction} moveDirection={moveDirection} focusLevel={focusLevel} displaySide={displaySide} key={index} item={item} />
         )
       })
     }

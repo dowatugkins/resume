@@ -5,6 +5,82 @@
   background-color: #282c34;
 }
 
+p {
+  color: white;
+  margin: 0;
+  font-weight: lighter
+}
+
+.display {
+  flex: 1;
+}
+
+.info-box {
+
+}
+
+.info-box-text-container {
+  margin-top: 50px;
+  background-color: white;
+  width: 100%;
+  justify-content: center;
+}
+
+.info-box-left {
+  padding: 20px;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+}
+
+.info-box-right {
+  padding: 20px;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
+}
+
+ul.info-box-list {
+  padding-inline-start: 0;
+  margin-top: -5px;
+}
+
+.info-image {
+
+}
+
+.list-item-row {
+  margin-top: 5px;
+}
+
+.info-box-list-item {
+  list-style: none;
+  margin-left: 5px;
+}
+
+.list-item-icon {
+  color: blue;
+}
+
+.info-text {
+  color: black;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+.info-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.box-open {
+
+}
+
+.box-closed {
+
+}
+
 html body {
   display: block;
   position: fixed;
@@ -24,6 +100,44 @@ div {
   height: 100%;
 }
 
+.open-button.info-box-open {
+  transition: all 0.7s;
+  transform: rotate(0deg);
+}
+
+.open-button.info-box-closed {
+  transition: all 0.7s;
+  transform: rotate(180deg);
+}
+
+.header-card-list.closed {
+
+}
+
+.header-card-list.open {
+
+}
+
+.header-image {
+  transition: width 0.7s, height 0.7s;
+}
+
+.info-box {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  bottom: 0;
+  transition: all 0.7s;
+}
+
+.info-box.box-closed {
+  bottom: -300px;
+}
+
+.header-card-1.open { /* focused */
+  transform: translateY(-100px);
+}
+
 /* All Animations are done at a global level */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -31,76 +145,90 @@ div {
   }
 
   .header-card-1 { /* focused */
+
   }
 
   .header-card-2 { /* 1 level back */
+
   }
 
   .header-card-3 { /* 2 levels back */
+
   }
 
   .header-card-4 { /* just left screen */
+
   }
 
   .header-card-offscreen { /* off screen */
+
+  }
+
+  .header-card-1.open { /* focused */
+
+  }
+
+  .header-card-2.open { /* 1 level back */
+
+  }
+
+  .header-card-3.open { /* 2 levels back */
+
+  }
+
+  .header-card-4.open { /* just left screen */
+
   }
 
   .header-card {
-    transition: filter 0.7s, font-size 0.7s, top 0.7s, left 0.7s, right 0.7s, height 0.7s, max-width 0.7s;
+    transition: all 0.7s;
   }
-}
 
-p {
-  color: 'white';
-}
-
-.display {
-  flex: 1;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .display-side-center {
+    transition: all 0.7s;
   }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-@keyframes center {
-  100% {
-    padding-top: 4em;
-    font-size: 2em;
-    max-width: 80%;
+  .tagline {
+    transition: all 0.7s;
   }
-}
 
-@keyframes card-2 {
-  100% {
-    padding-top: 3em;
-    font-size: 1em;
-    max-width: 400px;
+  .byline {
+    transition: all 0.7s;
   }
-}
 
-@keyframes card-3 {
-  100% {
-    padding-top: 2em;
-    font-size: 0.7em;
-    max-width: 300px;
+  .header-card-list {
+    transition: all 0.7s;
   }
-}
 
-@keyframes card-4 {
-  100% {
-    font-size: 0.6em;
-    max-width: 200px;
+  .open-button {
+    transition: all 2s;
   }
-}
 
-@keyframes offscreen {
-  100% {
-    max-width: 0px;
-    font-size: 0em;
+  .open-button.info-box-open {
+
+  }
+
+  .open-button.info-box-closed {
+
+  }
+
+  .header-card-list.closed {
+
+  }
+
+  .header-card-list.open {
+
+  }
+
+  .header-image {
+    transition: width 0.7s, height 0.7s;
+  }
+
+  .info-box {
+    transition: all 0.7s;
+  }
+
+  .info-box.box-closed {
+
   }
 }

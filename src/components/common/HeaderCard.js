@@ -7,13 +7,18 @@
 import React, { useEffect } from 'react';
 
 import './HeaderCard.css';
+import useWindowSize from '../../hooks/useWindowSize';
 import { get } from '../../config/utilities';
 
 function HeaderCard(props) {
+  const { width } = useWindowSize();
+
   const {
     focusLevel = 'offscreen',
     displaySide = 'center',
     moveDirection,
+    onOpenInfoBox,
+    isOpen,
     item,
     onClick,
   } = props;
@@ -22,13 +27,35 @@ function HeaderCard(props) {
 
   }, []);
 
+  const size = focusLevel === '1' ? width / 12 :
+      focusLevel === '2' ? width / 25 :
+        focusLevel === '3' ? width / 35 :
+          focusLevel === '4' ? width / 50 :
+            0;
+
+  const taglineSize = focusLevel === '1' ? width / 17 :
+      focusLevel === '2' ? width / 25 :
+        focusLevel === '3' ? width / 35 :
+          focusLevel === '4' ? width / 40 :
+            0;
+
+  const bylineSize = focusLevel === '1' ? width / 30 :
+    focusLevel === '2' ? width / 60 :
+      focusLevel === '3' ? width / 80 :
+        focusLevel === '4' ? width / 100 :
+          0;
+
   return (
-    <div className={`header-card-${focusLevel} display-side-${displaySide + ((moveDirection && displaySide === 'offscreen') ? '-' + moveDirection : '')} header-card`} onClick={onClick}>
-      <p className="tagline">{get(item, 'tagline', '')}</p>
+    <div className={`header-card-${focusLevel} ${isOpen} display-side-${displaySide} ${moveDirection} header-card`} onClick={onClick}>
+      <p className="tagline" style={{ fontSize: taglineSize }}>{get(item, 'tagline', '')}</p>
       <div className="bylineRow">
         {/* item.image */}
-        <p className="byline">{get(item, 'byline', '')}</p>
-        {/* open close button */}
+        <img className={`header-image`} src={get(item, 'image', '')} alt="" style={{ width: size, height: size}}/>
+        <p className="byline" style={{ fontSize: bylineSize }}>
+          {get(item, 'byline', '')} {
+            <i class={`material-icons open-button info-box-${isOpen}`} onClick={onOpenInfoBox}>keyboard_arrow_down</i>
+          }
+        </p>
       </div>
     </div>
   );
