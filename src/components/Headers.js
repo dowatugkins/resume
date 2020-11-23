@@ -8,6 +8,7 @@
 import React, { useState, useEffect } from 'react';
 
 import HeaderCard from './common/HeaderCard';
+import InfoBox from './InfoBox';
 
 function Headers(props) {
   const { list, onIndexChange, onOpenInfoBox, isOpen } = props;
@@ -63,27 +64,30 @@ function Headers(props) {
   }
 
   return (
-    <div className={`header-card-list ${isOpen}`}>
-      {
-      list.map((item, index) => {
-        const focusLevel = index === currentIndex ? '1' :
-          leftIndicies.includes(index) ? `${leftIndicies.indexOf(index) + 1}` :
-            rightIndicies.includes(index) ? `${rightIndicies.indexOf(index) + 1}` :
-              'offscreen';
-        const displaySide = index === currentIndex ? 'center' :
-          leftIndicies.includes(index) ? 'left' :
-            rightIndicies.includes(index) ? 'right' :
-              'offscreen';
-        const direction = displaySide === 'left' ? () => moveLeft() :
-          displaySide === 'right' ? () => moveRight() :
-            displaySide === 'center' ? index === currentIndex ? () => moveRight() : moveDirection === 'right' ? () => moveRight() : () => moveLeft() :
-              () => moveLeft();
-        return (
-          <HeaderCard isOpen={isOpen} onOpenInfoBox={onOpenInfoBox} onClick={direction} moveDirection={moveDirection} focusLevel={focusLevel} displaySide={displaySide} key={index} item={item} />
-        )
-      })
-    }
-    </div>
+    <>
+      <div className={`header-card-list ${isOpen}`}>
+        {
+        list.map((item, index) => {
+          const focusLevel = index === currentIndex ? '1' :
+            leftIndicies.includes(index) ? `${leftIndicies.indexOf(index) + 1}` :
+              rightIndicies.includes(index) ? `${rightIndicies.indexOf(index) + 1}` :
+                'offscreen';
+          const displaySide = index === currentIndex ? 'center' :
+            leftIndicies.includes(index) ? 'left' :
+              rightIndicies.includes(index) ? 'right' :
+                'offscreen';
+          const direction = displaySide === 'left' ? () => moveLeft() :
+            displaySide === 'right' ? () => moveRight() :
+              displaySide === 'center' ? index === currentIndex ? () => moveRight() : moveDirection === 'right' ? () => moveRight() : () => moveLeft() :
+                () => moveLeft();
+          return (
+            <HeaderCard isOpen={isOpen} onOpenInfoBox={onOpenInfoBox} onClick={direction} moveDirection={moveDirection} focusLevel={focusLevel} displaySide={displaySide} key={index} item={item} />
+          )
+        })
+      }
+      </div>
+      <InfoBox item={list[currentIndex]} isOpen={isOpen} list={list} currentIndex={currentIndex} onMoveLeft={moveLeft} onMoveRight={moveRight}/>
+    </>
   );
 };
 

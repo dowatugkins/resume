@@ -1,3 +1,17 @@
+export const months = [
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'June',
+  'July',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec',
+];
+
 export const resumeList = [
   {
     tagline: "Hello, I'm @dowatugkins",

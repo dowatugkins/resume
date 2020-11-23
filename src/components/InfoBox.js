@@ -8,9 +8,11 @@
 import React from 'react';
 
 import { get } from '../config/utilities';
+import Timeline from './Timeline';
+import './InfoBox.css';
 
 function InfoBox(props) {
-  const { isOpen, item } = props;
+  const { isOpen, item, currentIndex, list, onMoveLeft, onMoveRight } = props;
 
   const imageStyle = {
     width: 300,
@@ -19,7 +21,7 @@ function InfoBox(props) {
 
   return (
     <div className={`info-box box-${isOpen}`}>
-      {/* timeline box */}
+      <Timeline item={item} currentIndex={currentIndex} listLength={list.length} onMoveLeft={onMoveLeft} onMoveRight={onMoveRight}/>
       <div className={'info-box-text-container'}>
         <div className={'info-box-left'}>
           <p className={'info-title info-text'}>{get(item, 'footer.title', '')}</p>
@@ -29,12 +31,12 @@ function InfoBox(props) {
         <div className={'info-box-right'}>
           <p className={'info-text-right info-text'}>{get(item, 'footer.rightText', '')}</p>
           <ul className={'info-box-list'}>
-            {get(item, 'footer.list', []).map((listItem) => {
+            {get(item, 'footer.list', []).map((listItem, index) => {
               return (
-                <div className={'list-item-row'}>
-                <i class={`material-icons list-item-icon`}>whatshot</i>
-                <li className={'info-box-list-item'}>{listItem}</li>
-              </div>
+                <div key={index} className={'list-item-row'}>
+                  <i className={`material-icons list-item-icon`}>whatshot</i>
+                  <li className={'info-box-list-item'}>{listItem}</li>
+                </div>
             )})}
           </ul>
         </div>

@@ -15,79 +15,11 @@ p {
   flex: 1;
 }
 
-.info-box {
-
-}
-
-.info-box-text-container {
-  margin-top: 50px;
-  background-color: white;
-  width: 100%;
-  justify-content: center;
-}
-
-.info-box-left {
-  padding: 20px;
-  flex-direction: column;
-  flex: 1;
-  text-align: left;
-}
-
-.info-box-right {
-  padding: 20px;
-  flex-direction: column;
-  flex: 1;
-  text-align: left;
-}
-
-ul.info-box-list {
-  padding-inline-start: 0;
-  margin-top: -5px;
-}
-
-.info-image {
-
-}
-
-.list-item-row {
-  margin-top: 5px;
-}
-
-.info-box-list-item {
-  list-style: none;
-  margin-left: 5px;
-}
-
-.list-item-icon {
-  color: blue;
-}
-
-.info-text {
-  color: black;
-  font-size: 1.3em;
-  line-height: 1.5em;
-}
-
-.info-title {
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-.box-open {
-
-}
-
-.box-closed {
-
-}
-
 html body {
   display: block;
   position: fixed;
   height: 100%;
   width: 100%;
-  left: 0;
-  top: 0;
 }
 
 div {
@@ -100,48 +32,36 @@ div {
   height: 100%;
 }
 
-.open-button.info-box-open {
-  transition: all 0.7s;
-  transform: rotate(0deg);
-}
-
-.open-button.info-box-closed {
-  transition: all 0.7s;
-  transform: rotate(180deg);
-}
-
-.header-card-list.closed {
-
-}
-
-.header-card-list.open {
-
-}
-
-.header-image {
-  transition: width 0.7s, height 0.7s;
-}
-
-.info-box {
-  position: absolute;
-  width: 100%;
-  height: 350px;
-  bottom: 0;
-  transition: all 0.7s;
-}
-
-.info-box.box-closed {
-  bottom: -300px;
-}
-
-.header-card-1.open { /* focused */
-  transform: translateY(-100px);
-}
-
 /* All Animations are done at a global level */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 5s linear;
+  }
+
+  .header-image {
+    transition: width 0.7s, height 0.7s;
+  }
+
+  .info-box {
+    transition: all 0.7s;
+  }
+
+  .open-button.info-box-open {
+    transition: all 0.7s;
+    transform: rotate(0deg);
+  }
+
+  .open-button.info-box-closed {
+    transition: all 0.7s;
+    transform: rotate(180deg);
+  }
+
+  .header-card-list.closed {
+
+  }
+
+  .header-card-list.open {
+
   }
 
   .header-card-1 { /* focused */
@@ -228,7 +148,15 @@ div {
     transition: all 0.7s;
   }
 
+  .info-image {
+
+  }
+
   .info-box.box-closed {
 
+  }
+
+  .timeline-bar-marker {
+    transition: all 0.7s;
   }
 }

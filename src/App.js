@@ -18,7 +18,6 @@ function App() {
     <div className="App">
       <div className="display">
         <Headers isOpen={infoBoxOpen} onOpenInfoBox={onOpenInfoBox} list={resumeList} initialIndex={0} onIndexChange={(index) => setCurrentIndex(index)} />
-        <InfoBox item={resumeList[currentIndex]} isOpen={infoBoxOpen} list={resumeList} currentIndex={currentIndex}/>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ import useWindowSize from '../../hooks/useWindowSize';
 import { get } from '../../config/utilities';
 
 function HeaderCard(props) {
-  const { width } = useWindowSize();
+  const { width = 1 } = useWindowSize();
 
   const {
     focusLevel = 'offscreen',
@@ -53,7 +53,7 @@ function HeaderCard(props) {
         <img className={`header-image`} src={get(item, 'image', '')} alt="" style={{ width: size, height: size}}/>
         <p className="byline" style={{ fontSize: bylineSize }}>
           {get(item, 'byline', '')} {
-            <i class={`material-icons open-button info-box-${isOpen}`} onClick={onOpenInfoBox}>keyboard_arrow_down</i>
+            <i className={`material-icons open-button info-box-${isOpen}`} onClick={onOpenInfoBox}>keyboard_arrow_down</i>
           }
         </p>
       </div>
