@@ -50,7 +50,7 @@ function HeaderCard(props) {
       <p className="tagline" style={{ fontSize: taglineSize }}>{get(item, 'tagline', '')}</p>
       <div className="bylineRow">
         {/* item.image */}
-        <img className={`header-image`} src={get(item, 'image', '')} alt="" style={{ width: size, height: size}}/>
+        <img className={`header-image`} src={get(item, 'image', '')} alt="" style={{ maxWidth: size, maxHeight: size, objectFit: 'contain' }}/>
         <p className="byline" style={{ fontSize: bylineSize }}>
           {get(item, 'byline', '')} {
             <i className={`material-icons open-button info-box-${isOpen}`} onClick={onOpenInfoBox}>keyboard_arrow_down</i>

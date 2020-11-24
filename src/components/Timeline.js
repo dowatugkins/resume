@@ -14,8 +14,6 @@ import useWindowSize from '../hooks/useWindowSize';
 
 function Timeline(props) {
   const [hover, setHover] = useState(false);
-  const [markerStyle, setMarkerStyle] = useState({});
-  const [previousIndex, setPreviousIndex] = useState(-1);
 
   const { width } = useWindowSize();
 
@@ -33,17 +31,11 @@ function Timeline(props) {
     position: 'absolute',
     top: 38,
     transform: 'rotate(90deg)',
-    left: ((timelineWidth / listLength) * currentIndex) + (125 - (2 * currentIndex)),
+    left: timelineWidth ? ((timelineWidth / listLength) * currentIndex) + (125 - (2 * currentIndex)) : 0,
   };
 
-  // useEffect(() => {
-  //   if (currentIndex !== previousIndex) {
-  //     setPreviousIndex(currentIndex);
-  //     setMarkerStyle({
-  //       left: (timelineWidth / listLength) * currentIndex,
-  //     });
-  //   }
-  // }, [currentIndex, markerStyle, previousIndex, listLength, timelineWidth]);
+  useEffect(() => {
+  }, []);
 
   return (
     <div className={'timeline-container'}>
@@ -59,7 +51,7 @@ function Timeline(props) {
         <i className={'material-icons right-button'} onClick={() => onMoveRight()}>keyboard_arrow_right</i>
       </div>
       <div className={'timeline-bar right'} />
-      <i className={'material-icons timeline-bar-marker'} style={{ ...constantMarkerStyle, ...markerStyle }}>label</i>
+      <i className={'material-icons timeline-bar-marker'} style={constantMarkerStyle}>label</i>
     </div>
   );
 };

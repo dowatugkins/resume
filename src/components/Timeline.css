@@ -5,6 +5,8 @@
   height: 100px;
   justify-content: center;
   flex-direction: row;
+  background-color: #282c34;
+  z-index: 1000;
 }
 
 .timeline-date-container {

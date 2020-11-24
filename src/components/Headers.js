@@ -11,7 +11,7 @@ import HeaderCard from './common/HeaderCard';
 import InfoBox from './InfoBox';
 
 function Headers(props) {
-  const { list, onIndexChange, onOpenInfoBox, isOpen } = props;
+  const { list, onOpenInfoBox, isOpen } = props;
 
   const [currentIndex, setCurrentIndex] = useState(props.initialIndex);
   const [rightIndicies, setRightIndicies] = useState([0, 1, 2, 3]);
@@ -36,7 +36,6 @@ function Headers(props) {
     setLeftIndicies(left);
 
     const newIndex = currentIndex === 0 ? list.length - 1 : currentIndex - 1;
-    onIndexChange(newIndex);
     setCurrentIndex(newIndex);
     setMoveDirection('left');
   }
@@ -44,11 +43,8 @@ function Headers(props) {
   const moveRight = () => {
     let left = [...leftIndicies];
     let right = [...rightIndicies];
-    console.log(right);
     left.unshift(currentIndex === list.length - 1 ? 0 : currentIndex + 1);
     left.pop();
-    console.log(right);
-    console.log(currentIndex);
 
     const lastRight = right[right.length - 1];
     right.shift();
@@ -58,7 +54,6 @@ function Headers(props) {
     setLeftIndicies(left);
 
     const newIndex = currentIndex === list.length - 1 ? 0 : currentIndex + 1;
-    onIndexChange(newIndex);
     setCurrentIndex(newIndex);
     setMoveDirection('right');
   }
