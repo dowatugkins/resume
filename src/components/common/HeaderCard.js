@@ -46,10 +46,9 @@ function HeaderCard(props) {
           0;
 
   return (
-    <div className={`header-card-${focusLevel} ${isOpen} display-side-${displaySide} ${moveDirection} header-card`} onClick={onClick}>
+    <div className={`header-card-${focusLevel} ${isOpen} display-side-${displaySide} ${moveDirection} header-card`} onClick={onClick} style={{ width: focusLevel === '1' ? width : (width / 2) }}>
       <p className="tagline" style={{ fontSize: taglineSize }}>{get(item, 'tagline', '')}</p>
       <div className="bylineRow">
-        {/* item.image */}
         <img className={`header-image`} src={get(item, 'image', '')} alt="" style={{ maxWidth: size, maxHeight: size, objectFit: 'contain' }}/>
         <p className="byline" style={{ fontSize: bylineSize }}>
           {get(item, 'byline', '')} {
