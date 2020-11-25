@@ -108,7 +108,7 @@
 }
 
 .info-box-mobile.box-closed {
-  top: calc(100vh - 100px);
+  bottom: -300px;
 }
 
 .header-card-1.open { /* focused */

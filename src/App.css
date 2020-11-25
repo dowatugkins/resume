@@ -144,7 +144,7 @@ div {
     transition: width 0.7s, height 0.7s;
   }
 
-  .info-box {
+  .info-box-mobile {
     transition: all 0.7s;
   }
 
