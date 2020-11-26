@@ -21,11 +21,11 @@ export const resumeList = [
     date: new Date(),
     footer: {
       title: 'Also known as Doug Watkins',
-      leftText: "I've been writing code for 2 decades now, and been making mobile apps for 7 of those years. \nI live in central Utah and love to build mobile apps, solve problems, and spend time with my family.",
+      leftText: "I've been writing code for 2 decades now, and been making mobile apps for 7 of those years. \nI live in central Utah and love to build mobile apps, solve problems, and spend time with my family. ",
       rightText: "I'm not currently looking for employment, but that doesn't mean I'm not interested in working with you. Hit me up if any of these pique your interest:",
       image: require('../assets/images/borderlands.png'),
       list: [
-        'Consultations on Archtecture',
+        'Consultations on Architecture',
         'Mobile app development or planning',
         'Making your app more intuitive',
         'Playing Borderlands',
@@ -39,7 +39,7 @@ export const resumeList = [
     date: new Date(2019, 9, 15),
     footer: {
       title: 'Mobile Architect',
-      leftText: "I rebuilt their mobile app from the ground up. Architecting a solution to not only achieve the required funtionality now, but also allow the framework and programming to be flexible enough to allow for",
+      leftText: "I rebuilt their mobile app from the ground up. Architecting a solution to not only achieve the required funtionality now, but also allow the framework and programming to be flexible enough to allow for ",
       rightText: "numerous unforseen future features to be added with minimal refactoring. I was in charge of:",
       image: require('../assets/images/motionauto.png'),
       list: [
@@ -57,7 +57,7 @@ export const resumeList = [
     date: new Date(2018, 9, 5),
     footer: {
       title: 'Senior React Native Engineer',
-      leftText: "Took kvCore from a 3rd party developer, stabilized it, and then brought it from 2 stars to 4+. Then rebuilt their Open House app from the ground up. We also whitelabled both apps so they could be easily skinned for our customers.",
+      leftText: "Took kvCore from a 3rd party developer, stabilized it, and then brought it from 2 stars to 4+. Then rebuilt their Open House app from the ground up. We also whitelabled both apps so they could be easily skinned for our customers. ",
       rightText: "Automated their build process, and created automated processes for building the whitelabled apps as well.",
       image: require('../assets/images/kvcore.png'),
       list: [
@@ -69,30 +69,13 @@ export const resumeList = [
     },
   },
   {
-    tagline: "MFS2 back from the dead",
-    image: require('../assets/images/tyrsoft.png'),
-    byline: "Life being what it can be, kids and jobs stopped my work on MFS2, but a newfound skillset started it back up.",
-    date: new Date(2018, 8, 15),
-    footer: {
-      title: 'Lets rebuild with React Native',
-      leftText: "Fashionphile gave me a new technology to use, one that would allow me to easily acheive my dream of making an Android and iOS version of MFS2, so I started back up with it. Recreating what I had gotten to about 90% completion took me roughly 2",
-      rightText: "weeks. The project is once again stagnant due to work and my 4 mini me terrors, but will soon be under way again.",
-      image: require('../assets/images/mfs2.jpg'),
-      list: [
-        'Took a set of designs and recreated them in React Native',
-        'Further my knowledge of RN and it best practices',
-        'Adding new animations and other tweaks which make an app feel more professional',
-      ],
-    },
-  },
-  {
     tagline: "Fashionphile",
     image: require('../assets/images/fashionphile.png'),
     byline: "Moved focus from Native development to React Native Development",
     date: new Date(2017, 10, 25),
     footer: {
       title: 'Mobile Developer',
-      leftText: "In 2 weeks, went from 0 knowledge of React Native to actively working on features in the mobile app. In 6 months, was told by my mentor that my code looked identical to his, and was capable of accomplishing all my work without his help.",
+      leftText: "In 2 weeks, went from 0 knowledge of React Native to actively working on features in the mobile app. In 6 months, was told by my mentor that my code looked identical to his, and was capable of accomplishing all my work without his help. ",
       rightText: "Helped bring their mobile app to the store, using my knowledge of the iOS App Store to help navigate issues that arose because of previous apps.",
       image: require('../assets/images/fashionphileapp.png'),
       list: [
@@ -104,20 +87,19 @@ export const resumeList = [
     },
   },
   {
-    tagline: "My Food Storage 2",
+    tagline: "My Food Storage",
     image: require('../assets/images/tyrsoft.png'),
-    byline: "Moving on, I decided I wanted a more scalable version of My Food Storage, so I built one using Firebase and Swift.",
-    date: new Date(2017, 4, 9),
+    byline: "Based on my senior project, I started my path to millions in the app store.",
+    date: new Date(2015, 1, 28),
     footer: {
-      title: 'How can I make it better?',
-      leftText: "I was moving towards doing an app for iOS, Android, and web, so I decided to remake MFS using Firebase as the backend. This allowed for really fast syncing across all platforms. I could also set the app to keep things stored locally for my prepper friends.",
-      rightText: "So, I created my next swift app, adding new features discovered through doing a small kickstarter campaign.",
-      image: require('../assets/images/mfs2.jpg'),
+      title: 'My first fully fledged mobile app',
+      leftText: "Another food storage tracker, this time with everything stored locally on the phone and with no server side code. Since my experience making server side code was small, I kept it all in the app. I also re-made the app multipe times ",
+      rightText: "since I wasn't happy with it. I then focused on the following:",
+      image: require('../assets/images/mfs.jpg'),
       list: [
-        'Kickstarter used to get user input and testers',
-        'Rebuilt with new features discovered through backers',
-        'Focused more on building your food storage instead of just tracking it',
-        'Will eventually be white labeled',
+        'An intuitive design - my parents had to know what to do without any prompting from me or the app',
+        'Speed of use - 10 seconds or less to add or remove a food item once you learned how to use the app',
+        'Simple UI - how could I fit all my UI into comfortable and easily reached areas of the screen? What was the best way to nest parts of the navigation?',
       ],
     },
   },
@@ -128,7 +110,7 @@ export const resumeList = [
     date: new Date(2015, 7, 14),
     footer: {
       title: 'Learn by playing in a sandbox',
-      leftText: "As I was finishing My Food Storage, I was also looking for work. Seeing that most places wanted Swift experience, I decided to make an app in swift. Around that time I also saw an article about a JS learning app. After downloading and trying it",
+      leftText: "As I was finishing My Food Storage, I was also looking for work. Seeing that most places wanted Swift experience, I decided to make an app in swift. Around that time I also saw an article about a JS learning app. After downloading and trying it ",
       rightText: "I realized it missed the mark, since it didn't allow the user to actually practice what they were learning.",
       image: require('../assets/images/coder.jpg'),
       list: [
@@ -140,19 +122,37 @@ export const resumeList = [
     },
   },
   {
-    tagline: "My Food Storage",
+    tagline: "My Food Storage 2",
     image: require('../assets/images/tyrsoft.png'),
-    byline: "Based on my senior project, I started my path to millions in the app store.",
-    date: new Date(2015, 1, 28),
+    byline: "Moving on, I decided I wanted a more scalable version of My Food Storage, so I built one using Firebase and Swift.",
+    date: new Date(2017, 4, 9),
     footer: {
-      title: 'My first fully fledged mobile app',
-      leftText: "Another food storage tracker, this time with everything stored locally on the phone and with no server side code. Since my experience making server side code was small, I kept it all in the app. I also re-made the app multipe times",
-      rightText: "since I wasn't happy with it. I then focused on the following:",
-      image: require('../assets/images/mfs.jpg'),
+      title: 'How can I make it better?',
+      leftText: "I was moving towards doing an app for iOS, Android, and web, so I decided to remake MFS using Firebase as the backend. This allowed for really fast syncing across all platforms. I could also set the app to keep things stored locally for my prepper friends. ",
+      rightText: "So, I created my next swift app, adding new features discovered through doing a small kickstarter campaign.",
+      image: require('../assets/images/mfs2.jpg'),
       list: [
-        'An intuitive design - my parents had to know what to do without any prompting from me or the app',
-        'Speed of use - 10 seconds or less to add or remove a food item once you learned how to use the app',
-        'Simple UI - how could I fit all my UI into comfortable and easily reached areas of the screen? What was the best way to nest parts of the navigation?',
+        'Kickstarter used to get user input and testers',
+        'Rebuilt with new features discovered through backers',
+        'Focused more on building your food storage instead of just tracking it',
+        'Will eventually be white labeled',
+      ],
+    },
+  },
+  {
+    tagline: "MFS2 back from the dead",
+    image: require('../assets/images/tyrsoft.png'),
+    byline: "Life being what it can be, kids and jobs stopped my work on MFS2, but a newfound skillset started it back up.",
+    date: new Date(2018, 8, 15),
+    footer: {
+      title: 'Lets rebuild with React Native',
+      leftText: "Fashionphile gave me a new technology to use, one that would allow me to easily acheive my dream of making an Android and iOS version of MFS2, so I started back up with it. Recreating what I had gotten to about 90% completion took me roughly 2 ",
+      rightText: "weeks. The project is once again stagnant due to work and my 4 mini me terrors, but will soon be under way again.",
+      image: require('../assets/images/mfs2.jpg'),
+      list: [
+        'Took a set of designs and recreated them in React Native',
+        'Further my knowledge of RN and it best practices',
+        'Adding new animations and other tweaks which make an app feel more professional',
       ],
     },
   },
@@ -163,7 +163,7 @@ export const resumeList = [
     date: new Date('May 10, 2013'),
     footer: {
       title: 'Integrity is critical to me',
-      leftText: "We chose the name of our original name carefully. Integrity was of vital importance to me, and as such needed to be part of the name. Later, trying to pick a new name, I decided that Tyr - the norse god of justice - was a name that described important characteristics to me.",
+      leftText: "We chose the name of our original name carefully. Integrity was of vital importance to me, and as such needed to be part of the name. Later, trying to pick a new name, I decided that Tyr - the norse god of justice - was a name that described important characteristics to me. ",
       rightText: "Originally creating websites using Wordpress, now we create websites in React and mobile apps in React Native.",
       image: require('../assets/images/tyrsoft.png'),
       list: [
@@ -182,7 +182,7 @@ export const resumeList = [
     date: new Date(2013, 6, 10),
     footer: {
       title: 'Utah State Alumni',
-      leftText: "First majoring in Computer Engineering, then Computer Science, and finally Management Information Systems. I originally wanted to make video games - since I was 13 - but realized it didn't offer the Family Life I wanted. During my final project I created an iOS app",
+      leftText: "First majoring in Computer Engineering, then Computer Science, and finally Management Information Systems. I originally wanted to make video games - since I was 13 - but realized it didn't offer the Family Life I wanted. During my final project I created an iOS app ",
       rightText: "and fell in love with making mobile apps. Teaching myself Objective-C and using the API created by my teammates we sucessuflly delivered a working food storage tracker.",
       image: require('../assets/images/usu.png'),
       list: [
@@ -217,7 +217,7 @@ export const resumeList = [
     date: new Date(2003, 5, 1),
     footer: {
       title: 'Computer Progamming',
-      leftText: "I already knew I wanted to make games, but my Junior year of high school I started doing something about it. I instantly fell in love with the process of writing software. I love puzzles and software is the ultimate puzzle. I also found out I have a natural knack for writing",
+      leftText: "I already knew I wanted to make games, but my Junior year of high school I started doing something about it. I instantly fell in love with the process of writing software. I love puzzles and software is the ultimate puzzle. I also found out I have a natural knack for writing ",
       rightText: "code, and was usually the first done with my work, and the person everyone came to with questions. Also, with admin rights, because of working for the sys admin at school, I also knew how to bend the rules, and had rights to do things such as installing and playing Unreal Tournament.",
       image: require('../assets/images/unreal.png'),
       list: [
