@@ -32,6 +32,24 @@ export const resumeList = [
       ],
     },
   },
+    {
+    tagline: "Knock",
+    image: require('../assets/images/knock-circle.png'),
+    byline: "Rebuilt iOS and Android apps using modern React Native.",
+    date: new Date(2021, 1, 4),
+    footer: {
+      title: 'Senior Software Engineer',
+      leftText: "I rebuilt their mobile app from the ground up. Courtesy of multiple pivots, the app was built and rebuilt several times. Using a modern custom hook based architecture, we built and tested",
+      rightText: "much of the business logic through custom hooks and passed the relevant data through context:",
+      image: require('../assets/images/knock.png'),
+      list: [
+        'Working with product managers to determine feasibility and direction for feature work',
+        'Creating the data storage and retrieval methods within the app',
+        'Building and consuming GraphQL queries to retrieve and update server side data',
+        'Working with product, design, and leadership to create a quality consumer application',
+      ],
+    },
+  },
   {
     tagline: "Motion Auto Insurance",
     image: require('../assets/images/motion.png'),
