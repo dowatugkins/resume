@@ -16,22 +16,42 @@ export const months = [
 export const resumeList = [
   {
     tagline: "Hello, I'm @dowatugkins",
-    image: require('../assets/images/Octocat.png'),
+    image: require('../assets/images/geekshizskull.png'),
     byline: "Mobile Architect, entrepreneur, creator of 4 mini-me terrors, and founder of Tyrsoft.",
     date: new Date(),
     footer: {
       title: 'Also known as Doug Watkins',
-      leftText: "I've been writing code for 2 decades now, and been making mobile apps for 7 of those years. \nI live in central Utah and love to build mobile apps, solve problems, and spend time with my family. ",
+      leftURL: 'https://shop.geekshiz.com',
+      leftText: "I've been writing code for over 2 decades now, and been making mobile apps for 10 of those years. \nI live in central Utah and love to build mobile apps, solve problems, and spend time with my family. I'm also currently creating geeky shiz for sale at **GeekShiz**.",
       rightText: "I'm not currently looking for employment, but that doesn't mean I'm not interested in working with you. Hit me up if any of these pique your interest:",
-      image: require('../assets/images/borderlands.png'),
+      image: require('../assets/images/geekshiz.png'),
       list: [
         'Consultations on Architecture',
         'Mobile app development or planning',
         'Making your app more intuitive',
         'Playing Borderlands',
+        'Creating Geeky Shiz',
       ],
     },
   },
+    {
+      tagline: "Shopify",
+      image: require('../assets/images/shopify-circle.png'),
+      byline: "Worked on the merchant Inbox app, a chat app connecting customers and merchants.",
+      date: new Date(2022, 5, 31),
+      footer: {
+        title: 'Developer',
+        leftText: "I worked on a small team building both the mobile and web applications on their Inbox app. This small team worked with a much larger team that was involved with all things Shopify Chat related. We were connecting merchants to customers who were chatting on their online stores.",
+        rightText: "Inbox was also connected to Facebook Messenger, Instagram,  Apple Business Chat, and email to allow merchants to connect with customers from multiple platforms.",
+        image: require('../assets/images/shopify.png'),
+        list: [
+          'Cleaned up bugs and tech debt',
+          'Used both REST and GraphQL to retrieve and update data',
+          'Worked on the React Native Web web app, as well as the React Native mobile app',
+          'Working with product, design, and leadership to create a quality consumer application',
+        ],
+      },
+    },
     {
     tagline: "Knock",
     image: require('../assets/images/knock-circle.png'),
