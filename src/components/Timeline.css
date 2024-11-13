@@ -1,9 +1,7 @@
 .timeline-container {
-  position: fixed;
-  left: 0;
-  right: 0;
   height: 100px;
-  justify-content: center;
+  width: 100%;
+  align-items: center;
   flex-direction: row;
   background-color: #282c34;
   z-index: 1000;
@@ -49,7 +47,7 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-.month .year{
+.month .year {
   font-size: 1.5em;
 }
 
@@ -83,6 +81,12 @@
   margin-left: 5px;
 }
 
-.timeline-controls-container.hover > .left-button, .timeline-controls-container.hover > .right-button {
+.timeline-controls-container.hover > .left-button,
+.timeline-controls-container.hover > .right-button {
   background-color: white;
+}
+
+.timeline-tracker {
+  transform: rotate(90deg);
+  position: fixed;
 }

@@ -8,15 +8,11 @@
 p {
   color: white;
   margin: 0;
-  font-weight: lighter
-}
-
-.display {
-  flex: 1;
+  font-weight: lighter;
 }
 
 html body {
-  display: block;
+  display: flex;
   position: fixed;
   height: 100%;
   width: 100%;
@@ -30,133 +26,4 @@ div {
   display: flex;
   flex: 1;
   height: 100%;
-}
-
-/* All Animations are done at a global level */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 5s linear;
-  }
-
-  .header-image {
-    transition: width 0.7s, height 0.7s;
-  }
-
-  .info-box {
-    transition: all 0.7s;
-  }
-
-  .open-button.info-box-open {
-    transition: all 0.7s;
-    transform: rotate(0deg);
-  }
-
-  .open-button.info-box-closed {
-    transition: all 0.7s;
-    transform: rotate(180deg);
-  }
-
-  .header-card-list.closed {
-
-  }
-
-  .header-card-list.open {
-
-  }
-
-  .header-card-1 { /* focused */
-
-  }
-
-  .header-card-2 { /* 1 level back */
-
-  }
-
-  .header-card-3 { /* 2 levels back */
-
-  }
-
-  .header-card-4 { /* just left screen */
-
-  }
-
-  .header-card-offscreen { /* off screen */
-
-  }
-
-  .header-card-1.open { /* focused */
-
-  }
-
-  .header-card-2.open { /* 1 level back */
-
-  }
-
-  .header-card-3.open { /* 2 levels back */
-
-  }
-
-  .header-card-4.open { /* just left screen */
-
-  }
-
-  .header-card {
-    transition: all 0.7s;
-  }
-
-  .display-side-center {
-    transition: all 0.7s;
-  }
-
-  .tagline {
-    transition: all 0.7s;
-  }
-
-  .byline {
-    transition: all 0.7s;
-  }
-
-  .header-card-list {
-    transition: all 0.7s;
-  }
-
-  .open-button {
-    transition: all 2s;
-  }
-
-  .open-button.info-box-open {
-
-  }
-
-  .open-button.info-box-closed {
-
-  }
-
-  .header-card-list.closed {
-
-  }
-
-  .header-card-list.open {
-
-  }
-
-  .header-image {
-    transition: width 0.7s, height 0.7s;
-  }
-
-  .info-box-mobile {
-    transition: all 0.7s;
-  }
-
-  .info-image {
-
-  }
-
-  .info-box.box-closed {
-
-  }
-
-  .timeline-bar-marker {
-    transition: all 0.7s;
-  }
 }
