@@ -63,7 +63,7 @@ export const resumeList = [
     date: new Date(2023, 4, 4),
     footer: {
       title: 'React Native Mobile Architect',
-      leftURL: 'mailto:doug@dougwatkinsdev.com',
+      leftURL: 'mailto:doug@geekshiz.com',
       leftText: `Most recently I've been consulting for Bridgenext and Varo as an Architect, helping Varo to get their app refactor from native Android and iOS to a React Native app. This contract ends soon, so if you are in need of React Native help, **email me**.`,
       rightText: `I've also been keeping busy between consulting contracts working on a new version of the My Food Storage app. Rewriting from the ground up to create a modern and easy to use app for tracking food inventory.`,
       image: require('../assets/images/varo.png'),
