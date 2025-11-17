@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/dowatugkins.github.io/static/css/main.bf6437ee.css",
+    "main.js": "/dowatugkins.github.io/static/js/main.663d909d.js",
+    "static/media/geekshiz.png": "/dowatugkins.github.io/static/media/geekshiz.f522df76ccd496faa5a6.png",
+    "static/media/unreal.png": "/dowatugkins.github.io/static/media/unreal.7f18a9ec76370b19ca1d.png",
+    "static/media/coder.jpg": "/dowatugkins.github.io/static/media/coder.0d7e66bd17522d21feff.jpg",
+    "static/media/knock.png": "/dowatugkins.github.io/static/media/knock.1ac3fc467a0aef104035.png",
+    "static/media/mfs.jpg": "/dowatugkins.github.io/static/media/mfs.abead6cb6c222c5b176f.jpg",
+    "static/media/usu.png": "/dowatugkins.github.io/static/media/usu.ae7bfaab6235a3ae26f7.png",
+    "static/media/geekshizskull.png": "/dowatugkins.github.io/static/media/geekshizskull.153be8d2875dbe2dd506.png",
+    "static/media/motionauto.png": "/dowatugkins.github.io/static/media/motionauto.bbc7b403407b09c4252f.png",
+    "static/media/shopify-circle.png": "/dowatugkins.github.io/static/media/shopify-circle.851d3e3a9a32327d1511.png",
+    "static/media/mfs2.jpg": "/dowatugkins.github.io/static/media/mfs2.99f845e6c19d90d8c86d.jpg",
+    "static/media/kvcore.png": "/dowatugkins.github.io/static/media/kvcore.4a58ca5eddcff9a9083e.png",
+    "static/media/shopify.png": "/dowatugkins.github.io/static/media/shopify.dad3066ba35f8c5c9e84.png",
+    "static/media/heward.jpg": "/dowatugkins.github.io/static/media/heward.ed423cf45d6d6e947373.jpg",
+    "static/media/motion.png": "/dowatugkins.github.io/static/media/motion.807c0041e4042ec094f4.png",
+    "static/media/knock-circle.png": "/dowatugkins.github.io/static/media/knock-circle.a3e1223efe9179efb047.png",
+    "static/media/varo.png": "/dowatugkins.github.io/static/media/varo.53b924074d199c2a74f7.png",
+    "static/media/fashionphile.png": "/dowatugkins.github.io/static/media/fashionphile.24556459944735c5738b.png",
+    "static/media/fashionphileapp.png": "/dowatugkins.github.io/static/media/fashionphileapp.ee87745cd3e87ab09c63.png",
+    "index.html": "/dowatugkins.github.io/index.html",
+    "main.bf6437ee.css.map": "/dowatugkins.github.io/static/css/main.bf6437ee.css.map",
+    "main.663d909d.js.map": "/dowatugkins.github.io/static/js/main.663d909d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf6437ee.css",
+    "static/js/main.663d909d.js"
+  ]
+}
